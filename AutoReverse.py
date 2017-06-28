@@ -1,8 +1,18 @@
+bl_info = {
+    "name": "Auto Reverse",
+    "description": "Automatically bakes and reverses any animation or rigid body simulation",
+    "author": "Freddie Rawlins",
+    "version": (1.0),
+    "blender": (2, 7, 6),
+    "api": 31236,
+    "location": "View3D > Specials > AutoReverse",
+    "wiki_url": "",
+    "tracker_url": "",
+    "category": "Animation"
+}
+
 import bpy
 import math
-
-scn = bpy.context.scene
-
 
 class AutoReverse(bpy.types.Operator):
     bl_idname = "object.move_operator"
@@ -81,6 +91,8 @@ class AutoReverse(bpy.types.Operator):
 def register():
     bpy.utils.register_class(AutoReverse)
 
+def unregister():
+    bpy.utils.unregister_class(AutoReverse)
 
 if __name__ == "__main__":
     register()
