@@ -1,3 +1,16 @@
+bl_info = {
+    "name": "Slow Time",
+    "description": "Automatically 'slows' time in any animation or rigid body simulation",
+    "author": "Freddie Rawlins",
+    "version": (1.0),
+    "blender": (2, 7, 6),
+    "api": 31236,
+    "location": "View3D > Specials > Slow",
+    "wiki_url": "",
+    "tracker_url": "",
+    "category": "Animation"
+}
+
 import bpy
 import math
 from bpy.props import *
